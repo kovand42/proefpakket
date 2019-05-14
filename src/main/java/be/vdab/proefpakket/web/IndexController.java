@@ -1,4 +1,4 @@
-package be.vdab.proefpakket.controllers;
+package be.vdab.proefpakket.web;
 
 import be.vdab.proefpakket.services.BrouwerService;
 import org.springframework.stereotype.Controller;

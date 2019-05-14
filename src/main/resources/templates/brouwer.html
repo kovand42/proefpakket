@@ -1,22 +1,24 @@
 <!doctype html>
-<html lang="nl" xmlns:th="http://www.thymeleaf.org">
-<head
-        th:replace="fragments::head(title=${brouwer}==null ?
-'Brouwer niet gevonden' : ${brouwer.naam})"></head>
+<html lang='nl' xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments::head(title=${brouwer.naam})"></head>
 <body>
-<div th:if="${brouwer}==null" class="fout">Brouwer niet gevonden.</div>
-<h1 th:if="${brouwer}!=null" th:text="${brouwer.naam}"></h1>
-<dl th:if="${brouwer}!=null" th:object="${brouwer}">
+<h1 th:text='${brouwer.naam}'></h1>
+<dl>
     <dt>Straat</dt>
-    <dd th:text="*{adres.straat}"></dd>
+    <dd th:text='${brouwer.adres.straat}'></dd>
     <dt>Huisnummer</dt>
-    <dd th:text="*{adres.huisNr}"></dd>
+    <dd th:text='${brouwer.adres.huisNr}'></dd>
     <dt>Postcode</dt>
-    <dd th:text="*{adres.gemeente.postcode}"></dd>
+    <dd th:text='${brouwer.adres.gemeente.postcode}'></dd>
     <dt>Gemeente</dt>
-    <dd th:text="*{adres.gemeente.naam}"></dd>
+    <dd th:text='${brouwer.adres.gemeente.naam}'></dd>
     <dt>Ondernemingsnummer</dt>
-    <dd th:text="*{ondernemingsNr}"></dd>
+    <dd th:text='${brouwer.ondernemingsNr}'></dd>
 </dl>
-<body>
+<div>
+    <a
+            th:href='@{/brouwers/{id}/ondernemingsnr(id=${brouwer.id})}'>Ondernemingsnummer
+        invullen</a>
+</div>
+</body>
 </html>
