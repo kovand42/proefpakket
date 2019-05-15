@@ -15,10 +15,15 @@
     <dt>Ondernemingsnummer</dt>
     <dd th:text='${brouwer.ondernemingsNr}'></dd>
 </dl>
-<div>
-    <a
-            th:href='@{/brouwers/{id}/ondernemingsnr(id=${brouwer.id})}'>Ondernemingsnummer
-        invullen</a>
+<div th:if="${brouwer}!=null">
+    <div>
+        <a th:href='@{/brouwers/{id}/ondernemingsnr(id=${brouwer.id})}'>
+            Ondernemingsnummer invullen</a>
+    </div>
+    <div>
+        <a th:href="@{/brouwers/{id}/proefpakket(id=${brouwer.id})}">Proefpakket
+            aanvragen</a>
+    </div>
 </div>
 </body>
 </html>
