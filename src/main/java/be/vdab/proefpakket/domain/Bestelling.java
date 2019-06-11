@@ -1,5 +1,7 @@
 package be.vdab.proefpakket.domain;
 
+import be.vdab.proefpakket.adapters.LocalDateAdapter;
+
 import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
@@ -60,6 +62,10 @@ public class Bestelling implements Serializable {
 
     public Brouwer getBrouwer() {
         return brouwer;
+    }
+
+    public void setBrouwer(Brouwer brouwer) {
+        this.brouwer = brouwer;
     }
 
     @Override
