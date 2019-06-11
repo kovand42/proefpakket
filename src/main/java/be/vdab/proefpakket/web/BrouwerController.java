@@ -115,12 +115,11 @@ public class BrouwerController {
                                     SessionStatus session, RedirectAttributes redirect) {
         if (optionalBrouwer.isPresent()) {
             Brouwer brouwer = optionalBrouwer.get();
-           // System.out.println(brouwer.getNaam());
             if (errors.hasErrors()) {
                 return new ModelAndView("proefpakketstap2").addObject(brouwer)
                         .addObject("gemeenten", gemeenteService.findAll());
             }
-            bestelling.setBrouwer(brouwer);
+           // bestelling.setBrouwer(brouwer);
             bestellingService.create(bestelling);
             session.setComplete();
             return new ModelAndView("redirect:/");

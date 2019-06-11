@@ -10,7 +10,8 @@
     <label>Straat: <span th:errors="*{straat}"></span>
         <input th:field="*{straat}" required autofocus></label>
     <label>Huisnummer: <span th:errors="*{huisNr}"></span>
-        <input th:field="*{huisNr}" required></label>
+        <input th:field="*{huisNr}" required>
+        <input type="hidden" th:value="${brouwer}"></label>
     <label>Gemeente:<span th:errors="*{gemeente}"></span>
         <select th:field="*{gemeente}">
             <option th:each="gemeente:${gemeenten}"

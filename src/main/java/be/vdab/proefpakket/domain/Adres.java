@@ -20,7 +20,7 @@ public class Adres implements Serializable {
     @NotBlank(groups = Bestelling.Stap2.class)
     private String huisNr;
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    @JoinColumn(name = "gemeenteid")
+    @JoinColumn(name = "gemeenteId")
     @NotNull(groups = Bestelling.Stap2.class)
     private Gemeente gemeente;
 
