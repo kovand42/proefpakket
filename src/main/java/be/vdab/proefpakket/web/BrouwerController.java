@@ -119,7 +119,6 @@ public class BrouwerController {
                 return new ModelAndView("proefpakketstap2").addObject(brouwer)
                         .addObject("gemeenten", gemeenteService.findAll());
             }
-           // bestelling.setBrouwer(brouwer);
             bestellingService.create(bestelling);
             session.setComplete();
             return new ModelAndView("redirect:/");

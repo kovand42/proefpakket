@@ -64,10 +64,6 @@ public class Bestelling implements Serializable {
         return brouwer;
     }
 
-    public void setBrouwer(Brouwer brouwer) {
-        this.brouwer = brouwer;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
