@@ -11,7 +11,7 @@
         <input th:field="*{straat}" required autofocus></label>
     <label>Huisnummer: <span th:errors="*{huisNr}"></span>
         <input th:field="*{huisNr}" required>
-        <input type="hidden" th:value="${brouwer}"></label>
+    </label>
     <label>Gemeente:<span th:errors="*{gemeente}"></span>
         <select th:field="*{gemeente}">
             <option th:each="gemeente:${gemeenten}"
@@ -20,6 +20,7 @@
         </select></label>
     <input type="submit" value="Stap 1" name="stap1" formnovalidate>
     <input type="submit" value="Opslaan" name="opslaan">
+    <input type="hidden" th:value="${brouwer.id}" name="brouwer">
 </form>
 </body>
 </html>
