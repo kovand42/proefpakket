@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("weer")
 class WeerController {
-    private static final String VIEW = "weer/temperatuur";
+    private static final String VIEW = "temperatuur";
     private final WeerService weerService;
 
     public WeerController(WeerService weerService) {
