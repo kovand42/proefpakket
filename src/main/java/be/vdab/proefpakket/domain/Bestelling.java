@@ -1,5 +1,7 @@
 package be.vdab.proefpakket.domain;
 
+import be.vdab.proefpakket.adapters.LocalDateAdapter;
+
 import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;

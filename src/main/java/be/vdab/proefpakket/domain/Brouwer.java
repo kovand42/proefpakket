@@ -1,8 +1,12 @@
 package be.vdab.proefpakket.domain;
 
 import be.vdab.proefpakket.constraints.OndernemingsNr;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 @Entity
