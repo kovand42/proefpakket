@@ -1,8 +1,8 @@
 package be.vdab.proefpakket.services;
 
-import be.vdab.proefpakket.domain.Bestelling;
+import be.vdab.proefpakket.domain.Bestelling;/*
 import be.vdab.proefpakket.mail.MailSender;
-import be.vdab.proefpakket.messaging.ProefpakketMessage;
+import be.vdab.proefpakket.messaging.ProefpakketMessage;*/
 import be.vdab.proefpakket.repositories.BestellingRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.core.JmsTemplate;
@@ -33,9 +33,9 @@ public class DefaultBestellingService implements BestellingService{
 /*        mailSender.proefpakket(bestelling.getEmailAdres(),
                 bestelling.getBrouwer().getNaam());*/
         bestellingRepository.save(bestelling);
-        ProefpakketMessage message = new ProefpakketMessage(
+/*        ProefpakketMessage message = new ProefpakketMessage(
                 bestelling.getEmailAdres(), bestelling.getBrouwer().getNaam());
-        jmsTemplate.convertAndSend(proefpakkatQueue, message);
+        jmsTemplate.convertAndSend(proefpakkatQueue, message);*/
     }
 
 }
