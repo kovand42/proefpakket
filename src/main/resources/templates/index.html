@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="nl" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments::head(title='Proefpakket')"></head>
+<head th:replace="fragments::head(title=#{proefpakket})"></head>
 <body>
-<h1>Proefpakket</h1>
-<blockquote>Een pakket bieren van een brouwer naar uw keuze.</blockquote>
-<img th:src="@{/images/brouwerij.jpg}" alt="brouwerij" class="fullwidth">
-<div>Kies een brouwer:</div>
+<h1 th:text="#{proefpakket}"></h1>
+<blockquote th:text="#{omschrijvingProefpakket}"></blockquote>
+<img th:src="@{/images/brouwerij.jpg}" th:alt="#{brouwerij}" class="fullwidth">
+<div th:text="#{kiesEenBrouwer}"></div>
 <ul id="alfabet">
     <li th:each="letter:${alfabet}">
         <a th:href="@{/alfabet/{letter}(letter=${letter})}" th:text="${letter}"></a>
@@ -15,5 +15,7 @@
             <a th:href="@{/brouwers/{id}(id=*{id})}" th:text="*{naam}"></a>
         </li>
     </ul>
+    <a th:href='@{?locale=nl_BE}'>Nederlands</a>
+    <a th:href='@{?locale=fr_BE}'>Français</a>
 </body>
 </html>
